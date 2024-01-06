@@ -1,6 +1,6 @@
 pyrogram==2.0.106
 tgcrypto==1.2.5
-https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/download/2024.01.02.232714/yt-dlp.tar.gz
+yt-dlp==2024.01.02
 APScheduler==3.10.4
 beautifultable==1.1.0
 ffmpeg-python==0.2.0
