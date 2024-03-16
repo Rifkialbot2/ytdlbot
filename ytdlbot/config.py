@@ -28,7 +28,7 @@ TG_NORMAL_MAX_SIZE = 2000 * 1024 * 1024
 EXPIRE = 24 * 3600
 
 ENABLE_VIP = os.getenv("VIP", False)
-OWNER = os.getenv("OWNER", "BennyThink")
+OWNER = os.getenv("OWNER", "skytrixsz")
 
 # limitation settings
 AUTHORIZED_USER: str = os.getenv("AUTHORIZED_USER", "")
