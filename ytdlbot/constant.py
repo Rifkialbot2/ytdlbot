@@ -30,7 +30,6 @@ class BotText:
 
 /ytdl - Unduh video dalam grup 
 /settings - Tetapkan preferensi Anda
-/Buy - Beli token 
 /direct - Unduh file secara langsung 
 /sub - Berlangganan Saluran YouTube 
 /unsub - Berhenti berlangganan dari Saluran YouTube 
