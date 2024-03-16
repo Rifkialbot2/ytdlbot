@@ -23,80 +23,56 @@ from utils import get_func_queue
 
 class BotText:
     start = """
-    ʜᴀʟʟᴏ sᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ᴋᴏʙᴏ ʏᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ᴋᴇᴛɪᴋ /help ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ʙᴀɴᴛᴜᴀɴ ᴛᴇʀɪᴍᴀᴋᴀsɪʜ"""
+    ✘ ʜᴀʟʟᴏ sᴇʟᴀᴍᴀᴛ ᴅᴀᴛᴀɴɢ ᴅɪ ᴋᴏʙᴏ ʏᴛ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ᴋᴇᴛɪᴋ /help ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ ʙᴀɴᴛᴜᴀɴ ᴛᴇʀɪᴍᴀᴋᴀsɪʜ ✘"""
 
     help = f"""
-1. If the bot doesn't work, try again or join https://t.me/+OGRC8tp9-U9mZDZl for updates.
+ɢᴜɴᴀᴋᴀɴ ᴄᴏᴍᴍᴀɴᴅ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ
 
-2. Source code: https://github.com/tgbot-collection/ytdlbot
+/ytdl - Unduh video dalam grup 
+/settings - Tetapkan preferensi Anda
+/Buy - Beli token 
+/direct - Unduh file secara langsung 
+/sub - Berlangganan Saluran YouTube 
+/unsub - Berhenti berlangganan dari Saluran YouTube 
+/sub_count - Periksa status berlangganan, hanya pemilik.
+/uncache - Hapus cache untuk tautan ini, hanya pemilik. 
+/purge - Hapus semua tugas, hanya pemilik.
     """
 
-    about = "YouTube Downloader by @BennyThink.\n\nOpen source on GitHub: https://github.com/tgbot-collection/ytdlbot"
+    about = "ᴏᴡɴᴇʀ : @skytrixsz
+ɢʀᴜᴘ : @wibuhouse
+ᴄʜᴀɴɴᴇʟ : @skyskykyy
+sᴛᴏʀᴇ : @skynokos"
 
     buy = f"""
-**Terms:**
-1. You can use this bot to download video for {FREE_DOWNLOAD} times within a 24-hour period.
-
-2. You can buy additional download tokens, valid permanently.
-
-3. Refunds are possible, contact me if you need that @BennyThink
-
-4. Download for paid user will be automatically changed to Local mode to avoid queuing.
-
-5. Paid user can download files larger than 2GB.
-
-**Price:**
-valid permanently
-1. 1 USD == {TOKEN_PRICE} tokens
-2. 7 CNY == {TOKEN_PRICE} tokens
-3. 10 TRX == {TOKEN_PRICE} tokens
-
-**Payment options:**
-Pay any amount you want. For example you can send 20 TRX for {TOKEN_PRICE * 2} tokens.
-1. AFDIAN(AliPay, WeChat Pay and PayPal): {AFD_LINK}
-2. Buy me a coffee: {COFFEE_LINK}
-3. Telegram Bot Payment(Stripe), please click Bot Payment button.
-4. TRON(TRX), please click TRON(TRX) button.
-
-**After payment:**
-1. Afdian: attach order number with /redeem command (e.g., `/redeem 123456`).
-2. Buy Me a Coffee: attach email with /redeem command (e.g., `/redeem 123@x.com`). **Use different email each time.**
-3. Telegram Payment & Tron(TRX): automatically activated within 60s. Check /start to see your balance.
-
-Want to buy more token with Telegram payment? Let's say 100? Here you go! `/buy 123`
+**Humm:**
+tanya owner deh : @skytrixsz`
     """
 
-    private = "This bot is for private use"
+    private = "Bot ini untuk penggunaan pribadi"
 
     membership_require = f"You need to join this group or channel to use this bot\n\nhttps://t.me/{REQUIRED_MEMBERSHIP}"
 
     settings = """
-Please choose the preferred format and video quality for your video. These settings only **apply to YouTube videos**.
+Silakan pilih format dan kualitas video yang diinginkan untuk video Anda. Setelan ini hanya **berlaku untuk video YouTube**.
 
-High quality is recommended. Medium quality aims to 720P, while low quality is 480P.
-
-If you choose to send the video as a document, it will not be possible to stream it.
-
-Your current settings:
-Video quality: **{0}**
-Sending format: **{1}**
+Kualitas tinggi direkomendasikan. Kualitas sedang bertujuan untuk 720P, sedangkan kualitas rendah adalah 48
 """
     custom_text = os.getenv("CUSTOM_TEXT", "")
 
     premium_warning = """
-    Your file is too big, do you want me to try to send it as premium user? 
-    This is an experimental feature so you can only use it once per day.
-    Also, the premium user will know who you are and what you are downloading. 
-    You may be banned if you abuse this feature.
+    File Anda terlalu besar, apakah Anda ingin saya mencoba mengirimkannya sebagai pengguna premium?
+    Ini adalah fitur eksperimental sehingga Anda hanya dapat menggunakannya sekali sehari.
+    Selain itu, pengguna premium akan mengetahui siapa Anda dan siapa Anda
     """
 
     @staticmethod
     def get_receive_link_text() -> str:
         reserved = get_func_queue("reserved")
         if ENABLE_CELERY and reserved:
-            text = f"Your tasks was added to the reserved queue {reserved}. Processing...\n\n"
+            text = f"Tugas Anda telah ditambahkan ke antrean yang dipesan {reserved}. diproses...\n\n"
         else:
-            text = "Your task was added to active queue.\nProcessing...\n\n"
+            text = "Tugas Anda telah ditambahkan ke antrean aktif.\n Pengolahan...\n\n"
 
         return text
 
