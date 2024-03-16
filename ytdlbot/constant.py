@@ -38,10 +38,7 @@ class BotText:
 /purge - Hapus semua tugas, hanya pemilik.
     """
 
-    about = "ᴏᴡɴᴇʀ : @skytrixsz
-ɢʀᴜᴘ : @wibuhouse
-ᴄʜᴀɴɴᴇʟ : @skyskykyy
-sᴛᴏʀᴇ : @skynokos"
+    about = "ᴏᴡɴᴇʀ : @skytrixsz ɢʀᴜᴘ : @wibuhouse ᴄʜᴀɴɴᴇʟ : @skyskykyy sᴛᴏʀᴇ : @skynokos"
 
     buy = f"""
 **Humm:**
